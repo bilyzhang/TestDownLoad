@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mappn.gfan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity
+            android:name="com.example.ui.AppsManagerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--   <activity android:name="com.example.widget.BaseActivity"/> -->
+        <activity android:name="com.example.ui.PreloadActivity"/>
+        <activity android:name="com.example.ui.FileManagerActivity"/>
+        
+        <!-- GFan SDK uses -->
+        <meta-data android:name="gfan_cpid" android:value="机锋市场" />
+        <meta-data android:name="gfan_statistics_appkey"
+            android:value="05607E221ACFEBE77B74" />
+        <meta-data android:name="gfan_type" android:value="tongjisdk" />
+        <!-- content ID -->
+        <meta-data android:name="gfan_cid" android:value="9" />
+        <!-- upgrade uses -->
+        <meta-data android:name="gfan_debug" android:value="1" />
+    </application>
+    
+    <!-- Permission Group -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.mappn.gfan.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.hudee.pns.permission.RECEIVE" />
+    <supports-screens android:anyDensity="true" />
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="9" />
+</manifest>
